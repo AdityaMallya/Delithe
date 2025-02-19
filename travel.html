@@ -26,6 +26,126 @@
       nav ul li:hover {
         background-color: #575757;
       }
+      .home {
+        width: 1500px;
+        height: 500px;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+      .card {
+        position: relative;
+        width: 250px;
+        height: 400px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: brown;
+      }
+      .card1 {
+        position: relative;
+        width: 250px;
+        height: 400px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: white;
+      }
+      .card1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .card h2 {
+        margin-top: 20px;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .price {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: burlywood;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #0a4c91;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background-color: #063c73;
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+        background-color: #444;
+        color: white;
+        border-radius: 10px;
+        width: 70%;
+        margin: auto;
+      }
+      .info div {
+        text-align: left;
+      }
+      .info table {
+        width: 200%;
+        border-collapse: collapse;
+      }
+
+      .info td {
+        padding: 10px;
+        text-align: left;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .contact h2 {
+        text-align: left;
+      }
     </style>
   </head>
   <body>
@@ -46,104 +166,62 @@
       </ul>
     </nav>
 
-    <section id="home">
-      <h2>Welcome to New Travels</h2>
-      <p>Discover the world with our new travel experiences.</p>
-    </section>
+    <img src="image.png" class="home" />
 
-    <section id="destinations">
-      <h2>Popular Destinations</h2>
-      <table border="1">
-        <tr>
-          <th>Destination</th>
-          <th>Description</th>
-          <th>Action</th>
-        </tr>
-        <tr>
-          <td>Paris, France</td>
-          <td>Experience the romance and culture of the City of Lights.</td>
-          <td><button>Choose</button></td>
-        </tr>
-        <tr>
-          <td>Bali, Indonesia</td>
-          <td>Relax on beautiful beaches and explore lush jungles.</td>
-          <td><button>Choose</button></td>
-        </tr>
-        <tr>
-          <td>New York, USA</td>
-          <td>Visit the bustling metropolis and its iconic landmarks.</td>
-          <td><button>Choose</button></td>
-        </tr>
-      </table>
-    </section>
+    <div class="container">
+      <div class="card">
+        <img src="kashmir.jpeg" alt="Kashmir" />
+        <h2>Kashmir</h2>
+        <p class="price">starting at ₹24,900.00</p>
+        <button class="button">BOOK NOW</button>
+      </div>
 
-    <section id="packages">
-      <h2>Our Travel Packages</h2>
-      <table border="1">
-        <tr>
-          <th>Package</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Luxury Escape</td>
-          <td>A five-star experience with exclusive amenities.</td>
-        </tr>
-        <tr>
-          <td>Budget Adventure</td>
-          <td>Affordable trips without compromising on fun.</td>
-        </tr>
-        <tr>
-          <td>Family Vacation</td>
-          <td>Enjoy stress-free travel with activities for all ages.</td>
-        </tr>
-      </table>
-    </section>
+      <div class="card1">
+        <img src="dub.jpg" alt="Dubai" />
+        <h2>Dubai</h2>
+        <p class="price">starting at ₹184,900.00</p>
+        <button class="button">BOOK NOW</button>
+      </div>
+      <div class="card1">
+        <img src="mysore.jpg" alt="Mysore" />
+        <h2>Mysore</h2>
+        <p class="price">starting at ₹16,900.00</p>
+        <button class="button">BOOK NOW</button>
+      </div>
+      <div class="card1">
+        <img src="Aus.jpg" alt="Aus" />
+        <h2>Australia</h2>
+        <p class="price">starting at ₹116,900.00</p>
+        <button class="button">BOOK NOW</button>
+      </div>
+    </div>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <table border="1">
-        <tr>
-          <th>Service</th>
-        </tr>
-        <tr>
-          <td>Flight and Hotel Bookings</td>
-        </tr>
-        <tr>
-          <td>Custom Tour Packages</td>
-        </tr>
-        <tr>
-          <td>Travel Insurance</td>
-        </tr>
-        <tr>
-          <td>Visa Assistance</td>
-        </tr>
-        <tr>
-          <td>24/7 Customer Support</td>
-        </tr>
-      </table>
-    </section>
+    <div class="info">
+      <div class="contact">
+        <h2>Contact Us</h2>
+      </div>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <table border="1">
-        <tr>
-          <th>Contact Method</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td>newExplorer@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Phone</td>
-          <td>9236458971</td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td>456 New Street, somewhere, somewhere</td>
-        </tr>
-      </table>
-    </section>
+      <div>
+        <table>
+          <tr>
+            <th>Contact Method</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>newExplorer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>9236458971</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>456 New Street, somewhere, somewhere</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
     <footer>
       <center>
