@@ -1,59 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple News Website</title>
   </head>
-  <body>
-    <header>
-      <h1>News Today</h1>
-      <p>Your daily source for the latest news</p>
+  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0">
+    <header
+      style="background: #333; color: white; text-align: center; padding: 20px"
+    >
+      <h1 style="margin: 0">Daily Bugle</h1>
     </header>
 
-    <!--<nav>
-      <ul>
-        <li><a href="#world">World</a></li>
-        <li><a href="#sports">Sports</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#entertainment">Entertainment</a></li>
-      </ul>
-    </nav>-->
+    <main style="padding: 20px">
+      <div style="display: flex; align-items: center;">
 
-    <section id="world">
-      <h2>World News</h2>
-      <article>
-        <h3>Global Event Shakes Markets</h3>
-        <p>Details about a major world event impacting global markets.</p>
+      <article
+        style="
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <h2 style="color: #333">Breaking: Major Event Unfolds</h2>
+        <p style="color: #555">
+         <marquee> <img src="gg.png" alt="Bolsonaro" style="width: 200px; height: auto; margin-right: 15px;"></marquee>
+    <p style="flex: 1;">
+        Brazil’s former President Jair Bolsonaro has been charged in
+        connection with an alleged coup plot to overturn the results of the
+        2022 election and keep his opponent from taking power, according to
+        documents filed by prosecutors Tuesday evening. Bolsonaro was among 34
+        people facing charges including those of armed criminal organization,
+        attempted violent abolition of the democratic rule of law, coup
+        d’état, and damage qualified by violence. Prosecutors allege that the
+        plot began in 2021, with an effort to undermine public trust in
+        electronic voting machines. In 2022, Bolsonaro allegedly met with
+        ambassadors and diplomatic representatives to discuss the accusations
+        of voting fraud “in an attempt to prepare the international community
+        for disrespecting the popular will in the presidential elections,” a
+        statement from the Attorney General’s Office read. Despite finding no
+        evidence of election fraud, the defendants allegedly continued their
+        campaign to discredit the electoral system, prosecutors said.
+    </p>
       </article>
-    </section>
+      </div>
 
-    <section id="sports">
-      <h2>Sports News</h2>
-      <article>
-        <h3>Local Team Wins Championship</h3>
-        <p>The local team secured a victory in a thrilling final match.</p>
+      <article
+        style="
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <h2 style="color: #333">Technology: New Innovations</h2>
+        <p style="color: #555">
+        
+          <img src="tech.png" alt="" />
+        </p>
       </article>
-    </section>
 
-    <section id="technology">
-      <h2>Technology News</h2>
-      <article>
-        <h3>New Smartphone Released</h3>
-        <p>The latest smartphone model features cutting-edge technology.</p>
+      <article
+        style="
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <h2 style="color: #333">
+          <marquee behaviour="scroll" direction="right"
+            >Sports: Champions Trophy</marquee
+          >
+        </h2>
+        <p style="color: #555">
+          <img src="sport1.png" class="sport1" height="350px" width="570px" />
+          <br />
+          <br />
+
+          <img
+            src="sports2.png"
+            alt=""
+            class="sports2"
+            height="350"
+            width="460"
+          />
+        </p>
       </article>
-    </section>
+<div>
+      <article
+        style="
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <h2 style="color: #333">Discounts</h2>
+        <p style="color: #555">
+          The latest Travel agency websites providing 50% discounts.
+          <br />
+          <br />
 
-    <section id="entertainment">
-      <h2>Entertainment News</h2>
-      <article>
-        <h3>Blockbuster Movie Breaks Records</h3>
-        <p>A new blockbuster film has set new box office records.</p>
+          <button onclick="gotosss()">
+            <img src="dis.png" alt="" height="350px" width="750px" />
+          </button>
+          <img src="50%.jpg" width="250px" height="250">
+          <br>
+          <br>
+          <p>click the above image to start ur booking process</p>
+        </p>
       </article>
-    </section>
+      </div>
+    </main>
 
-    <footer>
-      <center>
-        <p>&copy; 2025 News today</p>
-      </center>
+    <footer
+      style="
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      "
+    >
+      <p style="margin: 0">&copy; 2025 Daily Bugle. All rights reserved.</p>
     </footer>
+
+    <script>
+      function gotosss() {
+        window.location.href = "travel.html";
+      }
+    </script>
   </body>
 </html>
