@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 900px;
+        max-width: 100%;
+      }
+
+      .left-panel {
+        background: linear-gradient(to bottom, #ff512f, #dd2476);
+        color: white;
+        padding: 40px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left-panel h2 {
+        margin-bottom: 10px;
+      }
+
+      .left-panel p {
+        text-align: center;
+      }
+
+      .left-panel button {
+        margin-top: 20px;
+        background-color: white;
+        color: #dd2476;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .form-container {
+        padding: 40px;
+        width: 60%;
+        border-radius: 0 50px 50px 0;
+        background-color: #ffffff;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        background-color: #f9f9f9;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff512f;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #dd2476;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <h2>Join Us</h2>
+        <p>Fill out the details to become a member</p>
+        <button>About Us</button>
+      </div>
+      <div class="form-container">
+        <h2>SIGN IN</h2>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const username = document.getElementById("username").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          if (name && username && email && password) {
+            alert(`Registration successful!\nWelcome, ${name}`);
+          } else {
+            alert("Please fill in all fields.");
+          }
+        });
+    </script>
+  </body>
+</html>
