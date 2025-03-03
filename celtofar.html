@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>cel</title>
+</head>
+<body>
+  <h2>celcius to farenheit Converter</h2>
+    <input type="number" id="no" placeholder="Enter a number">
+    <button onclick="checkcel()">Check</button>
+    <p id="res"></p>
+<script>
+
+function celtofar(celsius) {
+      return (celsius * 9) / 5 + 32;
+    }
+
+    function checkcel() {
+      let num = +document.getElementById("no").value;
+      if (!isNaN(num)) {
+        document.getElementById("res").innerText = 
+          `${num}°C is equal to ${celtofar(num)}°F`;
+      } else {
+        document.getElementById("res").innerText = "Please enter a valid number.";
+      }
+    }
+</script>
+</body>
+</html>

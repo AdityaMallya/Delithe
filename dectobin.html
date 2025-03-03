@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decimal to Binary</title>
+  </head>
+  <body>
+    <h2>Decimal to Binary Converter</h2>
+    <input type="number" id="no" placeholder="Enter a number" />
+    <button onclick="dec()">Convert</button>
+    <p id="res"></p>
+
+    <script>
+      function dectobin(decimal) {
+        return (decimal >>> 0).toString(2);
+      }
+
+      function dec() {
+        let num = document.getElementById("no").value;
+        if (num === "") {
+          document.getElementById("res").innerText =
+            "Please enter a valid number.";
+          return;
+        }
+        let binary = dectobin(parseInt(num, 10));
+        document.getElementById("res").innerText = `Binary: ${binary}`;
+      }
+    </script>
+  </body>
+</html>

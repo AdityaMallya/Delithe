@@ -104,9 +104,12 @@
   <body>
     <div class="container">
       <div class="left-panel">
-        <h2>Join Us</h2>
-        <p>Fill out the details to become a member</p>
-        <button>About Us</button>
+        <h2>Welcome to new travels</h2>
+        <p>please sign in to access the website</p>
+        <p>
+          If you want any other futher details.... please click the button below
+        </p>
+        <button class="hi" onclick="goto()">About Us</button>
       </div>
       <div class="form-container">
         <h2>SIGN IN</h2>
@@ -143,10 +146,17 @@
 
           if (name && username && email && password) {
             alert(`Registration successful!\nWelcome, ${name}`);
+
+            window.location.href =
+              "file:///C:/Users/Aditya/Desktop/Dlithe/Travel/travel.html";
           } else {
             alert("Please fill in all fields.");
           }
         });
+      function goto() {
+        window.location.href =
+          "file:///C:/Users/Aditya/Desktop/Dlithe/about/about.html";
+      }
     </script>
   </body>
 </html>

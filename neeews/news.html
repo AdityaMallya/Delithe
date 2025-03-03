@@ -3,131 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple News Website</title>
-  </head>
-  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0">
-    <header
-      style="background: #333; color: white; text-align: center; padding: 20px"
-    >
-      <h1 style="margin: 0">Daily Bugle</h1>
-    </header>
-
-    <main style="padding: 20px">
-      <div style="display: flex; align-items: center;">
-
-      <article
-        style="
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 10px;
-          margin-bottom: 20px;
-        "
-      >
-        <h2 style="color: #333">Breaking: Major Event Unfolds</h2>
-        <p style="color: #555">
-         <marquee> <img src="gg.png" alt="Bolsonaro" style="width: 200px; height: auto; margin-right: 15px;"></marquee>
-    <p style="flex: 1;">
-        Brazil’s former President Jair Bolsonaro has been charged in
-        connection with an alleged coup plot to overturn the results of the
-        2022 election and keep his opponent from taking power, according to
-        documents filed by prosecutors Tuesday evening. Bolsonaro was among 34
-        people facing charges including those of armed criminal organization,
-        attempted violent abolition of the democratic rule of law, coup
-        d’état, and damage qualified by violence. Prosecutors allege that the
-        plot began in 2021, with an effort to undermine public trust in
-        electronic voting machines. In 2022, Bolsonaro allegedly met with
-        ambassadors and diplomatic representatives to discuss the accusations
-        of voting fraud “in an attempt to prepare the international community
-        for disrespecting the popular will in the presidential elections,” a
-        statement from the Attorney General’s Office read. Despite finding no
-        evidence of election fraud, the defendants allegedly continued their
-        campaign to discredit the electoral system, prosecutors said.
-    </p>
-      </article>
-      </div>
-
-      <article
-        style="
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 10px;
-          margin-bottom: 20px;
-        "
-      >
-        <h2 style="color: #333">Technology: New Innovations</h2>
-        <p style="color: #555">
-        
-          <img src="tech.png" alt="" />
-        </p>
-      </article>
-
-      <article
-        style="
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 10px;
-          margin-bottom: 20px;
-        "
-      >
-        <h2 style="color: #333">
-          <marquee behaviour="scroll" direction="right"
-            >Sports: Champions Trophy</marquee
-          >
-        </h2>
-        <p style="color: #555">
-          <img src="sport1.png" class="sport1" height="350px" width="570px" />
-          <br />
-          <br />
-
-          <img
-            src="sports2.png"
-            alt=""
-            class="sports2"
-            height="350"
-            width="460"
-          />
-        </p>
-      </article>
-<div>
-      <article
-        style="
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 10px;
-          margin-bottom: 20px;
-        "
-      >
-        <h2 style="color: #333">Discounts</h2>
-        <p style="color: #555">
-          The latest Travel agency websites providing 50% discounts.
-          <br />
-          <br />
-
-          <button onclick="gotosss()">
-            <img src="dis.png" alt="" height="350px" width="750px" />
-          </button>
-          <img src="50%.jpg" width="250px" height="250">
-          <br>
-          <br>
-          <p>click the above image to start ur booking process</p>
-        </p>
-      </article>
-      </div>
-    </main>
-
-    <footer
-      style="
-        background: #333;
+    <title>Daily Bugle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background: #222;
         color: white;
         text-align: center;
-        padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-      "
-    >
-      <p style="margin: 0">&copy; 2025 Daily Bugle. All rights reserved.</p>
+        padding: 30px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      header h1 {
+        margin: 0;
+        letter-spacing: 2px;
+      }
+      main {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      article {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+      article:hover {
+        transform: translateY(-5px);
+      }
+      h2 {
+        color: #222;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Daily Bugle</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>Breaking: Major Event Unfolds</h2>
+        <img src="gg.png" alt="Bolsonaro" />
+        <p>
+          Brazil’s former President Jair Bolsonaro has been charged in
+          connection with an alleged coup plot...
+        </p>
+      </article>
+
+      <article>
+        <h2>Technology: New Innovations</h2>
+        <img src="tech.png" alt="Tech" />
+        <p>Discover the latest innovations in the tech world...</p>
+      </article>
+
+      <article>
+        <h2>Sports: Champions Trophy</h2>
+        <img src="sport1.png" alt="Sports" />
+        <img src="sports2.png" alt="Sports" />
+        <p>Catch up on the latest sports news...</p>
+      </article>
+
+      <article>
+        <h2>Discounts</h2>
+        <p>Travel agency websites providing 50% discounts.</p>
+        <button onclick="gotosss()">Book Now</button>
+        <img src="dis.png" alt="Discount" />
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Daily Bugle. All rights reserved.</p>
     </footer>
 
     <script>
       function gotosss() {
-        window.location.href = "file:///C:/Users/Aditya/Desktop/Dlithe/Travel/travel.html";
+        window.location.href =
+          "file:///C:/Users/Aditya/Desktop/Dlithe/Travel/travel.html";
       }
     </script>
   </body>

@@ -3,9 +3,24 @@
   <head>
     <title>New Travels - Travel Agency</title>
     <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
       nav {
-        background-color: #333;
+        background-color: #1e3c72;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         overflow: hidden;
+        border-radius: 0 0 15px 15px;
       }
       nav ul {
         list-style-type: none;
@@ -22,140 +37,117 @@
         color: white;
         display: block;
         padding: 14px 20px;
+        font-weight: bold;
+        transition: background-color 0.3s;
       }
-      nav ul li:hover {
-        background-color: #575757;
+      nav ul li a:hover {
+        background-color: #16325c;
+        border-radius: 10px;
       }
       .home {
-        width: 1500px;
-        height: 500px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 20px 0;
+      }
+      .filter {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .filter input[type="range"] {
+        width: 30%;
+        cursor: pointer;
       }
       .container {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 40px;
-      }
-      .card {
-        position: relative;
-        width: 250px;
-        height: 400px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        color: brown;
-      }
-      .card1 {
-        position: relative;
-        width: 250px;
-        height: 400px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        color: white;
-      }
-      .card1 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-
-      .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-      .card h2 {
-        margin-top: 20px;
-        font-size: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .price {
-        position: absolute;
-        bottom: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 18px;
-        font-weight: bold;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 5px 10px;
-        border-radius: 5px;
-        color: burlywood;
-      }
-
-      .button {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #0a4c91;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        text-decoration: none;
-      }
-
-      .button:hover {
-        background-color: #063c73;
-      }
-
-      .info {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
         padding: 20px;
-        background-color: #444;
-        color: white;
-        border-radius: 10px;
-        width: 70%;
+        max-width: 1200px;
         margin: auto;
       }
-      .info div {
-        text-align: left;
+      .card,
+      .card1 {
+        background-color: white;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding-bottom: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card:hover,
+      .card1:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .card img,
+      .card1 img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+      .card h2,
+      .card1 h2 {
+        margin: 20px 0 10px;
+        font-size: 22px;
+        color: #1e3c72;
+      }
+      .price {
+        background-color: #1e3c72;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 10px 0;
+        display: inline-block;
+      }
+      .button {
+        background-color: #2a5298;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #1e3c72;
+      }
+      .info {
+        background-color: #1e3c72;
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 800px;
+        margin: 40px auto;
       }
       .info table {
-        width: 200%;
+        width: 100%;
         border-collapse: collapse;
       }
-
+      .info th,
       .info td {
-        padding: 10px;
+        padding: 15px;
         text-align: left;
       }
       .footer {
-        background-color: #333;
+        background-color: #2a5298;
         color: white;
         text-align: center;
-        padding: 10px;
-        margin-top: 20px;
-      }
-      .contact h2 {
-        text-align: left;
+        padding: 15px;
+        border-radius: 20px 20px 0 0;
+        margin-top: 40px;
       }
     </style>
   </head>
   <body>
     <header>
-      <center>
-        <h1>New Travels</h1>
-        <p>Your gateway to unforgettable journeys</p>
-      </center>
+      <h1>New Travels</h1>
+      <p>Your gateway to unforgettable journeys</p>
     </header>
-
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -165,68 +157,83 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
     <img src="image.png" class="home" />
-
-    <div class="container">
-      <div class="card">
+    <div class="filter">
+      <label for="priceRange">Filter by price (₹): </label>
+      <input
+        type="range"
+        id="priceRange"
+        min="10000"
+        max="200000"
+        step="1000"
+        value="200000"
+      />
+      <span id="priceValue">₹200,000</span>
+    </div>
+    <div class="container" id="packageContainer">
+      <div class="card" data-price="24900">
         <img src="kashmir.jpeg" alt="Kashmir" />
         <h2>Kashmir</h2>
         <p class="price">starting at ₹24,900.00</p>
         <button class="button">BOOK NOW</button>
       </div>
-
-      <div class="card1">
+      <div class="card1" data-price="184900">
         <img src="dub.jpg" alt="Dubai" />
         <h2>Dubai</h2>
         <p class="price">starting at ₹184,900.00</p>
         <button class="button">BOOK NOW</button>
       </div>
-      <div class="card1">
+      <div class="card1" data-price="16900">
         <img src="mysore.jpg" alt="Mysore" />
         <h2>Mysore</h2>
         <p class="price">starting at ₹16,900.00</p>
         <button class="button">BOOK NOW</button>
       </div>
-      <div class="card1">
-        <img src="Aus.jpg" alt="Aus" />
+      <div class="card1" data-price="116900">
+        <img src="Aus.jpg" alt="Australia" />
         <h2>Australia</h2>
         <p class="price">starting at ₹116,900.00</p>
         <button class="button">BOOK NOW</button>
       </div>
     </div>
-
     <div class="info">
-      <div class="contact">
-        <h2>Contact Us</h2>
-      </div>
-
-      <div>
-        <table>
-          <tr>
-            <th>Contact Method</th>
-            <th>Details</th>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td>newExplorer@gmail.com</td>
-          </tr>
-          <tr>
-            <td>Phone</td>
-            <td>9236458971</td>
-          </tr>
-          <tr>
-            <td>Address</td>
-            <td>456 New Street, somewhere, somewhere</td>
-          </tr>
-        </table>
-      </div>
+      <h2>Contact Us</h2>
+      <table>
+        <tr>
+          <th>Contact Method</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>newExplorer@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>9236458971</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>456 New Street, somewhere, somewhere</td>
+        </tr>
+      </table>
     </div>
-
     <footer>
-      <center>
-        <p>&copy; Pls book some tickets :0</p>
-      </center>
+      <p>&copy; Pls book some tickets :0</p>
     </footer>
+    <script>
+      const priceRange = document.getElementById("priceRange");
+      const priceValue = document.getElementById("priceValue");
+      const packages = document.querySelectorAll(".card, .card1");
+
+      priceRange.addEventListener("input", () => {
+        const maxPrice = parseInt(priceRange.value, 10);
+        priceValue.textContent = `₹${maxPrice.toLocaleString()}`;
+
+        packages.forEach((pkg) => {
+          const price = parseInt(pkg.dataset.price, 10);
+          pkg.style.display = price <= maxPrice ? "block" : "none";
+        });
+      });
+    </script>
   </body>
 </html>
